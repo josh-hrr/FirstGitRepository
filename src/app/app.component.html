@@ -2,15 +2,19 @@
 <form action="">
     <label for="email">
         Ingresar Email
-        <input id="email" type="email">
+        <input [(ngModel)]="formulario.email" [ngModelOptions]="{standalone:true}" id="email" type="email">
     </label>
 
     <br>
     
     <label for="password">
         Ingresar Password
-        <input id="password" type="password">
+        <input [(ngModel)]="formulario.password" [ngModelOptions]="{standalone:true}" id="password" type="password">
     </label>
 </form>
+
+
+<p>{{formulario.email}}</p>
+<p>{{formulario.password}}</p>
 
 <router-outlet></router-outlet>
